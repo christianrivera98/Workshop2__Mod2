@@ -1,12 +1,10 @@
 const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-//const sassLoader = require("sass-loader");
-
 module.exports = {
   mode: "none",
   entry: {
-    app: ["@babel/polyfill", "./src/app/index.js"],
+    app: ["@babel/polyfill", "./src/app/scripts/index.js"],
   },
   output: {
     path: path.resolve(__dirname, "build"),
@@ -22,17 +20,29 @@ module.exports = {
         loader: "babel-loader",
       },
       {
-        test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        test: /\.scss$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
-        test: /\.s[ac]ss$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "assets/[name][ext]",
+        },
+      },
+      {
+        test: /\.html$/i,
+        use: [
+          {
+            loader: "html-loader",
+          }
+        ]
       },
     ],
   },
   plugins: [
     new HTMLWebpackPlugin({
+      inject: "body",
       hash: true,
       template: "./src/index.html",
       minify: {
@@ -46,6 +56,6 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: "css/app.bundle.css",
-    })
+    }),
   ],
 };
