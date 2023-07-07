@@ -1,0 +1,83 @@
+@import 'universals';
+@import 'variables';
+@import 'mixings';
+
+.conteiner{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    &__nav-left{
+        display: flex;
+        margin-left: 10px;
+       
+
+        &__list{
+            list-style-type: none;
+            margin-left: 70px;
+            
+            & li{
+                display: inline;
+                margin-right: 20px;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+.main-conteiner{
+    display: flex;
+}
+
+.left{
+    margin-top: 10%;
+
+
+    &__main h1{
+        padding-bottom: 0;
+        margin-left: 10%;
+        font-weight: 1000;
+        font-size: 100px;
+    }
+
+    &__main p{
+        width: 40%;
+        margin-left: 10%;
+        margin-top: 40px;
+        font-weight: 1000;
+        font-size: 18px ;
+        color: $color-secondary ;
+    }
+
+    &__main button{
+        width: 6rem;
+        height: 2.5rem;
+        border-radius: 10px;
+        background-color: $color-tertiary ;
+        border: none;
+        color: $color-primary;
+        margin-left: 10%;
+        margin-top: 40px;
+    }
+
+    &__figure{
+        margin-top: 40px;
+        margin-left: 10%;
+    }
+}
+
+.rigth{
+    margin-top: 5%;
+    &__aside img{
+        width: auto;
+        height: 700px;
+    }
+}
+
+
+
+

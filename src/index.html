@@ -6,12 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-            <div class="nav-left">
-                <img src="./assets/logo.svg"  alt="logo">
-                <ul>
-                    <li>Features</li>
-                    <li>Company</li>
+    <div class="conteiner">
+        <header class="header">
+            <div class="header__nav-left">
+                <img class="header__logo" src="./assets/logo.svg"  alt="logo">
+                <ul class="header__nav-left__list">
+                    <li>Features <img src="./assets/icon-arrow-down.svg" alt="arrow-down"></li>
+                    <li>Company<img src="./assets/icon-arrow-down.svg" alt="arrow-down"></li>
                     <li>Careers</li>
                     <li>About</li>
                 </ul>
@@ -20,20 +21,29 @@
                 <button class="login-button">Login</button>
                 <button class="register-button">Register</button>
             </div>
-    </header>
-    <main>
-        <h1>Make remote work</h1>
-        <p>Get your Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos nulla laborum delectus ratione doloribus excepturi. Minima pariatur eum debitis alias iste, deleniti, doloribus reprehenderit fugit tempora nobis, maiores neque exercitationem?</p>
-        <button>Learn more</button>
-    </main>
-    <aside>
-        <img src="./assets/image-hero-desktop.png" alt="">
-    </aside>
-    <figure>
-        <img src="./assets/client-databiz.svg" alt="">
-        <img src="./assets/client-audiophile.svg" alt="">
-        <img src="./assets/client-meet.svg" alt="">
-        <img src="./assets/client-maker.svg" alt="">
-    </figure>
+        </header>
+        <div class="main-conteiner">
+            <div class="left">
+                <main class="left__main">
+                    <h1>Make</h1>
+                    <h1>remote work</h1>
+                    <p>Get your team in sync, no matter you location. Streamline processes, create team rituals, and watch productivity soar.</p>
+                    <button>Learn more</button>
+                 </main>
+                <figure class="left__figure">
+                    <img src="./assets/client-databiz.svg" alt="">
+                    <img src="./assets/client-audiophile.svg" alt="">
+                    <img src="./assets/client-meet.svg" alt="">
+                    <img src="./assets/client-maker.svg" alt="">
+                </figure>
+            </div>
+            <div class="rigth">
+                <aside class="rigth__aside">
+                    <img src="./assets/image-hero-desktop.png" alt="image-hero-desktop">
+                </aside>
+            </div>
+        </div> 
+    </div>
+   
 </body>
 </html>
