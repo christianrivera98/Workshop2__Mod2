@@ -9,11 +9,12 @@
 .header{
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 30px;
 
     &__nav-left{
         display: flex;
-        margin-left: 10px;
+        margin-left: 40px;
+        align-items: center;
        
 
         &__list{
@@ -22,9 +23,38 @@
             
             & li{
                 display: inline;
-                margin-right: 20px;
-                padding: 5px;
+                margin-right: 40px;
+                font-size: 15px;
+                font-weight: 600;
+                color: $color-secondary;
+                
             }
+        }
+    }
+
+    &__nav-rigth{
+        display: flex;
+        margin-right: 40px;
+
+        & button {
+            background-color: $color-primary;
+            cursor: pointer;
+            width: 100px;
+            border: none;
+            color: $color-secondary;
+            font-size: 15px;
+            font-weight: 600;
+
+            &:hover{
+                border: 2px solid $color-secondary;
+                border-radius: 10px;
+            }
+          
+        }
+
+        & .login-button{
+            margin-right: 30px;
+
         }
     }
 }
@@ -54,27 +84,30 @@
     }
 
     &__main button{
-        width: 6rem;
-        height: 2.5rem;
+        width: 8rem;
+        height: 3rem;
         border-radius: 10px;
         background-color: $color-tertiary ;
         border: none;
         color: $color-primary;
         margin-left: 10%;
         margin-top: 40px;
+        font-weight: 800;
     }
 
     &__figure{
-        margin-top: 40px;
+        margin-top: 90px;
         margin-left: 10%;
     }
 }
 
 .rigth{
     margin-top: 5%;
+    margin-right: 130px;
     &__aside img{
         width: auto;
-        height: 700px;
+        height: 600px;
+        
     }
 }
 
