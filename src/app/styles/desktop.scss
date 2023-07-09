@@ -1,0 +1,117 @@
+@import 'universals';
+@import 'variables';
+@import 'mixings';
+
+.conteiner{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    &__nav-left{
+        display: flex;
+        margin-left: 40px;
+        align-items: center;
+       
+
+        &__list{
+            list-style-type: none;
+            margin-left: 70px;
+            
+            & li{
+                display: inline;
+                margin-right: 40px;
+                font-size: 15px;
+                font-weight: 600;
+                color: $color-secondary;
+                
+            }
+        }
+    }
+
+    &__nav-rigth{
+        display: flex;
+        margin-right: 40px;
+
+        & button {
+            background-color: $color-primary;
+            cursor: pointer;
+            width: 100px;
+            height: 50px;
+            border: none;
+            color: $color-secondary;
+            font-size: 15px;
+            font-weight: 600;
+
+            &:hover{
+                border: 2px solid $color-secondary;
+                border-radius: 10px;
+            }
+          
+        }
+
+        & .login-button{
+            margin-right: 30px;
+
+        }
+    }
+}
+
+.main-conteiner{
+    display: flex;
+}
+
+.left{
+    margin-top: 10%;
+
+
+    &__main h1{
+        padding-bottom: 0;
+        margin-left: 10%;
+        font-weight: 1000;
+        font-size: 100px;
+    }
+
+    &__main p{
+        width: 40%;
+        margin-left: 10%;
+        margin-top: 40px;
+        font-weight: 1000;
+        font-size: 18px ;
+        color: $color-secondary ;
+    }
+
+    &__main button{
+        width: 8rem;
+        height: 3rem;
+        border-radius: 10px;
+        background-color: $color-tertiary ;
+        border: none;
+        color: $color-primary;
+        margin-left: 10%;
+        margin-top: 40px;
+        font-weight: 800;
+    }
+
+    &__figure{
+        margin-top: 90px;
+        margin-left: 10%;
+    }
+}
+
+.rigth{
+    margin-top: 5%;
+    margin-right: 130px;
+    &__aside img{
+        width: auto;
+        height: 600px;
+        
+    }
+}
+
+
+
+
