@@ -1,5 +1,5 @@
 @import 'variables';
-@import url(https://fonts.google.com/specimen/Epilogue);
+
 
 *{
     margin: 0;
@@ -8,6 +8,7 @@
 }
 
 body{
+    background-color: $color-primary;
     font-family:$font-type ;
 }
 

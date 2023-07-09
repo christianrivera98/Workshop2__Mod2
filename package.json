@@ -1,7 +1,6 @@
 {
-  "name": "app-presupuesto",
+  "name": "workshop2_mod2",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack --mode development",
@@ -36,5 +35,6 @@
   "homepage": "https://christianrivera98.github.io/app-presupuesto-sass/",
   "devDependencies": {
     "gh-pages": "^5.0.0"
-  }
+  },
+  "description": ""
 }

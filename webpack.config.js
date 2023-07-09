@@ -1,10 +1,11 @@
 const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+//const sassLoader = require("sass-loader");
 module.exports = {
   mode: "none",
   entry: {
-    app: ["@babel/polyfill", "./src/app/scripts/index.js"],
+    app: ["@babel/polyfill", "./src/app/index.js"],
   },
   output: {
     path: path.resolve(__dirname, "build"),
@@ -20,8 +21,12 @@ module.exports = {
         loader: "babel-loader",
       },
       {
-        test: /\.scss$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
