@@ -2,116 +2,537 @@
 @import 'variables';
 @import 'mixings';
 
-.conteiner{
-    max-width: 1440px;
-    margin: 0 auto;
+.conteiner {
+  max-width: 1440px;
+  margin: 0 auto;
 }
-.header{
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+
+  &__nav-left {
     display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
+    margin-left: 40px;
+    align-items: center;
 
-    &__nav-left{
-        display: flex;
-        margin-left: 40px;
-        align-items: center;
-       
 
-        &__list{
-            list-style-type: none;
-            margin-left: 70px;
-            
-            & li{
-                display: inline;
-                margin-right: 40px;
-                font-size: 15px;
-                font-weight: 600;
-                color: $color-secondary;
-                
-            }
-        }
-    }
+    &__list {
+      list-style-type: none;
+      margin-left: 70px;
 
-    &__nav-rigth{
-        display: flex;
+      & li {
+        display: inline;
         margin-right: 40px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        color: $color-secondary;
+        position: relative;
 
-        & button {
-            background-color: $color-primary;
-            cursor: pointer;
-            width: 100px;
-            height: 50px;
-            border: none;
-            color: $color-secondary;
-            font-size: 15px;
-            font-weight: 600;
-
-            &:hover{
-                border: 2px solid $color-secondary;
-                border-radius: 10px;
-            }
-          
+        &:hover {
+          color: $color-tertiary;
         }
 
-        & .login-button{
-            margin-right: 30px;
+        & img {
+          color: $color-tertiary;
+        }
+
+        & .feature__section {
+          position: absolute;
+          right: 0;
 
         }
+
+        & .company__section {
+          position: absolute;
+          left: 0;
+          width: 120px;
+        }
+
+      }
     }
-}
+  }
 
-.main-conteiner{
+  &__nav-rigth {
     display: flex;
-}
+    margin-right: 40px;
 
-.left{
-    margin-top: 10%;
+    & button {
+      background-color: $color-primary;
+      cursor: pointer;
+      width: 100px;
+      height: 50px;
+      border: none;
+      color: $color-secondary;
+      font-size: 15px;
+      font-weight: 600;
 
-
-    &__main h1{
-        padding-bottom: 0;
-        margin-left: 10%;
-        font-weight: 1000;
-        font-size: 100px;
-    }
-
-    &__main p{
-        width: 40%;
-        margin-left: 10%;
-        margin-top: 40px;
-        font-weight: 1000;
-        font-size: 18px ;
-        color: $color-secondary ;
-    }
-
-    &__main button{
-        width: 8rem;
-        height: 3rem;
+      &:hover {
+        border: 2px solid $color-tertiary;
+        color: $color-tertiary;
         border-radius: 10px;
-        background-color: $color-tertiary ;
+      }
+
+    }
+
+    & .login-button {
+      margin-right: 30px;
+
+    }
+
+    & .register-button {
+      border: 2px solid $color-secondary;
+      border-radius: 10px;
+    }
+  }
+}
+
+.main-conteiner {
+  display: flex;
+}
+
+.left {
+  margin-top: 10%;
+
+
+  &__main h2 {
+    padding-bottom: 0;
+    margin-left: 10%;
+    font-weight: 1000;
+    font-size: 100px;
+  }
+
+  &__main p {
+    width: 40%;
+    margin-left: 10%;
+    margin-top: 40px;
+    font-weight: 1000;
+    font-size: 18px;
+    color: $color-secondary ;
+  }
+
+  &__main button {
+    width: 8rem;
+    height: 3rem;
+    border-radius: 10px;
+    background-color: $color-tertiary ;
+    border: none;
+    color: $color-primary;
+    margin-left: 10%;
+    margin-top: 40px;
+    font-weight: 800;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-primary;
+      color: $color-tertiary;
+      border: 2px solid $color-secondary;
+    }
+  }
+
+  &__figure {
+    margin-top: 90px;
+    margin-left: 10%;
+  }
+}
+
+.rigth {
+  margin-top: 5%;
+  margin-right: 130px;
+
+  &__aside img {
+    width: auto;
+    height: 600px;
+
+  }
+}
+
+.extra__section {
+
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  & div {
+    display: flex;
+    gap: 10px;
+    color: $color-secondary;
+    text-align: left;
+
+    &:hover {
+      color: $color-tertiary;
+    }
+  }
+
+}
+
+.hidden {
+  display: none;
+}
+
+.mobile-display {
+  display: none;
+}
+
+.desktop-display {
+  display: block;
+}
+
+//tablets
+@media (max-width: 992px) {
+  .header {
+    justify-content: space-between;
+    margin-top: 10px;
+
+    &__nav-left {
+      display: flex;
+      margin-left: 20px;
+      align-items: center;
+
+
+      &__list {
+        list-style-type: none;
+        margin-left: 30px;
+
+        & li {
+          display: inline;
+          margin-right: 20px;
+          font-size: 12px;
+          font-weight: 600;
+          cursor: pointer;
+          color: $color-secondary;
+          position: relative;
+
+          &:hover {
+            color: $color-tertiary;
+          }
+
+          & img {
+            color: $color-tertiary;
+          }
+
+          & .feature__section {
+            position: absolute;
+            right: 0;
+
+          }
+
+          & .company__section {
+            position: absolute;
+            left: 0;
+            width: 120px;
+          }
+
+        }
+      }
+    }
+
+    &__nav-rigth {
+      display: flex;
+      margin-right: 20px;
+
+      & button {
+        background-color: $color-primary;
+        cursor: pointer;
+        width: 75px;
+        height: 40px;
         border: none;
-        color: $color-primary;
-        margin-left: 10%;
-        margin-top: 40px;
-        font-weight: 800;
+        color: $color-secondary;
+        font-size: 15px;
+        font-weight: 600;
+
+        &:hover {
+          border: 2px solid $color-tertiary;
+          color: $color-tertiary;
+          border-radius: 10px;
+        }
+
+      }
+
+      & .login-button {
+        margin-right: 10px;
+
+      }
+
+      & .register-button {
+        border: 2px solid $color-secondary;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .left {
+    margin-top: 20px;
+    width: 45vw;
+
+    &__main h2 {
+      font-size: 38px;
     }
 
-    &__figure{
-        margin-top: 90px;
-        margin-left: 10%;
+    &__main p {
+      width: 40%;
+      margin-top: 20px;
+      font-size: 18px;
+      color: $color-secondary ;
     }
+
+    &__main button {
+      width: 8rem;
+      height: 3rem;
+      border-radius: 10px;
+      background-color: $color-tertiary ;
+      border: none;
+      color: $color-primary;
+      margin-left: 10%;
+      margin-top: 40px;
+      font-weight: 800;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $color-primary;
+        color: $color-tertiary;
+        border: 2px solid $color-secondary;
+      }
+    }
+
+    &__figure {
+      margin-top: 90px;
+      margin-left: 10%;
+    }
+  }
+
+  .rigth {
+    width: 45vw;
+    margin-top: 20px;
+    margin-right: 20px;
+
+    &__aside img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
 }
 
-.rigth{
-    margin-top: 5%;
-    margin-right: 130px;
-    &__aside img{
-        width: auto;
-        height: 600px;
-        
+//mobile
+@media (max-width: 544px) {
+  .header {
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0 0 0 0;
+
+    &__nav-left {
+      & ul {
+        display: none;
+      }
     }
+
+    &__nav-rigth {
+      justify-content: center;
+      align-items: center;
+      margin: 0 0 0 0;
+      padding: 0 0 0 0;
+
+      & .desktopBtn {
+        display: none;
+      }
+
+      & .mobileBtn {
+        display: block;
+      }
+    }
+  }
+
+  body {
+    position: absolute;
+    width: 100vw;
+  }
+
+  .conteiner {
+    z-index: 1;
+  }
+
+  .main-conteiner {
+    flex-direction: column;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+  }
+
+  .rigth {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    order: 1;
+    width: 100%;
+
+  }
+
+  .left {
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    margin: 0 0 0 0;
+    order: 2;
+
+    &__main {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+
+    &__main div {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      gap: 10px;
+
+      h2 {
+        display: inline;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+      }
+    }
+
+    &__main p {
+      width: 100%;
+      padding: 0 0 0 0;
+      margin: 0 0 0 0;
+      font-size: 14px;
+      color: $color-secondary ;
+      text-align: center;
+    }
+
+    &__main button {
+      width: 8rem;
+      height: 3rem;
+      border-radius: 10px;
+      background-color: $color-tertiary ;
+      border: none;
+      color: $color-primary;
+      padding: 0 0 0 0;
+      margin: 0 0 0 0;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $color-primary;
+        color: $color-tertiary;
+        border: 2px solid $color-secondary;
+      }
+    }
+
+    &__figure {
+      padding: 0 0 0 0;
+      margin: 40px 0 0 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 40px;
+
+      & img {
+        max-width: 50px;
+        max-height: 35px;
+        object-fit: contain;
+      }
+    }
+
+  }
+
+  .hamburger__section {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-primary;
+    opacity: 100;
+
+    width: 60vw;
+    height: 100%;
+
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 3;
+
+    padding: 20px;
+    gap: 20px;
+
+    & figure {
+      display: flex;
+      justify-content: end;
+    }
+
+    & ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      & li {
+        color: $color-secondary;
+
+        & section {
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          & div {
+            display: flex;
+            width: 100%;
+            gap: 20px;
+            text-align: left;
+
+            & p {
+              width: 70%;
+            }
+
+            & img {
+              width: 20px;
+            }
+          }
+        }
+      }
+    }
+
+
+    & button {
+      background-color: $color-primary;
+
+      width: 75px;
+      height: 40px;
+      border: none;
+      color: $color-secondary;
+      font-size: 15px;
+      font-weight: 600;
+      align-self: center;
+    }
+
+    & .hamburger__register-button {
+      border: 2px solid $color-secondary;
+      border-radius: 10px;
+      width: 100%;
+    }
+
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .mobile-display {
+    display: block;
+  }
+
+  .desktop-display {
+    display: none;
+  }
 }
-
-
-
-
