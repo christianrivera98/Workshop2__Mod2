@@ -1,0 +1,8 @@
+@import "./universal.scss";
+@import "./variables.scss";
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+}
