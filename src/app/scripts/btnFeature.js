@@ -20,6 +20,7 @@ const hamburgerFeatureArrow = document.querySelector(".hamburger__feature__arrow
 const hamburgerCompanyArrow = document.querySelector(".hamburger__company__arrow")
 
 const hamburgerSection = document.querySelector(".hamburger__section")
+const cover = document.querySelector(".cover")
 
 const hamburgerFeatureSection = document.querySelector(".hamburger__feature__section")
 const hamburgerCompanySection = document.querySelector(".hamburger__company__section")
@@ -52,6 +53,8 @@ const companyClick = () => {
 
 const hamburgerClick = () => {
   hamburgerSection.classList.toggle("hidden")
+  cover.classList.toggle("hidden")
+
 }
 
 const HamburgerFeatureClick = () => {

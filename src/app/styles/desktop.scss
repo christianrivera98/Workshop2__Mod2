@@ -454,7 +454,7 @@
     background-color: $color-primary;
     opacity: 100;
 
-    width: 60vw;
+    width: 70vw;
     height: 100%;
 
     position: fixed;
@@ -500,6 +500,10 @@
             }
           }
         }
+
+        & .hidden {
+          display: none;
+        }
       }
     }
 
@@ -522,6 +526,16 @@
       width: 100%;
     }
 
+  }
+
+  .cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30vw;
+    height: 100vh;
+    background-color: $color-tertiary;
+    opacity: 70%;
   }
 
   .hidden {
